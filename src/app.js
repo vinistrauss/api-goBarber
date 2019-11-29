@@ -1,6 +1,7 @@
 import 'dotenv/config';
 
 import express from 'express';
+import cors from 'cors';
 import path from 'path';
 import * as Sentry from '@sentry/node';
 import Youch from 'youch';
@@ -19,6 +20,7 @@ class App {
     this.middlewares();
     this.routes();
     this.excepetionHandler();
+    this.server.use(cors());
   }
 
   middlewares() {
