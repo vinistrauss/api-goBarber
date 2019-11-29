@@ -7,7 +7,7 @@
     "dev": "nodemon src/server.js",
     "dev:debug": "nodemon --inspect src/server.js",
     "queue": "nodemon src/queue.js",
-    "build": "sucrase ./src -d ./dist --transform",
+    "build": "sucrase ./src -d ./dist --transform imports",
     "start": "node dist/server.js"
   },
   "dependencies": {
